@@ -1,0 +1,56 @@
+.header {
+    // background-color: $color-secondary;
+    color: #fff;
+    font-size: 3rem;
+    padding: 1.8rem;
+
+    grid-column: col-start / col-end;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+
+    &__links {
+        list-style: none;
+        grid-column: 1 / -1;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    
+    &__link:link,
+    &__link:visited {
+        font-size: 4rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-display;
+        display: block;
+    }
+
+    &__rise-text {
+        font-size: 1.2rem;
+        font-family: $font-primary;
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        grid-column-gap: 1.5rem;
+        color: #fff;
+
+        // width: 100%;
+
+        //LINES ON SIDES OF TXT
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
+    }
+}

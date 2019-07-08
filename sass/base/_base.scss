@@ -1,0 +1,29 @@
+// global reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-secondary;
+    background-color: $color-primary;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    // 3 rows - header, thumbnail features, footer
+    grid-template-rows: 25vh min-content min-content;
+    // 6 cols
+    grid-template-columns: repeat(6, [col-start] 1fr) [col-end];
+}
